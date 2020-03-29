@@ -16,14 +16,14 @@ class Metric
 
     /**
      * @var string
-     * @SerializedName("status")
+     * @SerializedName("text")
      * @Type("string")
      */
     private $text;
 
     /**
      * @var string
-     * @SerializedName("status")
+     * @SerializedName("units")
      * @Type("string")
      */
     private $units;
