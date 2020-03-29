@@ -7,6 +7,12 @@ use JMS\Serializer\Annotation\Type;
 
 class LiveStreamState
 {
+    const STATE_STARTED = "started";
+    const STATE_STOPPED = "stopped";
+    const STATE_STARTING = "starting";
+    const STATE_STOPPING = "stopping";
+    const STATE_RESETTING = "resetting";
+
     /**
      * @var string
      * @SerializedName("state")
@@ -43,5 +49,30 @@ class LiveStreamState
         $this->ipAddress = $ipAddress;
 
         return $this;
+    }
+
+    public function isStarted(): bool
+    {
+        return $this->state === self::STATE_STARTED;
+    }
+
+    public function isStopped(): bool
+    {
+        return $this->state === self::STATE_STOPPED;
+    }
+
+    public function isStarting(): bool
+    {
+        return $this->state === self::STATE_STARTING;
+    }
+
+    public function isStopping(): bool
+    {
+        return $this->state === self::STATE_STOPPING;
+    }
+
+    public function isResetting(): bool
+    {
+        return $this->state === self::STATE_RESETTING;
     }
 }
