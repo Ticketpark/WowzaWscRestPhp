@@ -289,6 +289,20 @@ class LiveStream
     private $playerWidth;
 
     /**
+     * @var string
+     * @SerializedName("player_embed_code")
+     * @Type("string")
+     */
+    private $playerEmbedCode;
+
+    /**
+     * @var string
+     * @SerializedName("player_hls_playback_url")
+     * @Type("string")
+     */
+    private $playerHlsPlaybackUrl;
+
+    /**
      * @var bool
      * @SerializedName("recording")
      * @Type("boolean")
@@ -740,6 +754,30 @@ class LiveStream
     {
         $this->playerWidth = $playerWidth;
         
+        return $this;
+    }
+
+    public function getPlayerEmbedCode(): ?string
+    {
+        return $this->playerEmbedCode;
+    }
+
+    public function setPlayerEmbedCode(string $playerEmbedCode): self
+    {
+        $this->playerEmbedCode = $playerEmbedCode;
+
+        return $this;
+    }
+
+    public function getPlayerHlsPlaybackUrl(): ?string
+    {
+        return $this->playerHlsPlaybackUrl;
+    }
+
+    public function setPlayerHlsPlaybackUrl(string $playerHlsPlaybackUrl): self
+    {
+        $this->playerHlsPlaybackUrl = $playerHlsPlaybackUrl;
+
         return $this;
     }
 
