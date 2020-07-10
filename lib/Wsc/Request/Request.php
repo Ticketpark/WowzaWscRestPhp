@@ -19,9 +19,9 @@ abstract class Request
     const HTTP_METHOD_PATCH = 'patch';
     const HTTP_METHOD_DELETE = 'delete';
     const HTTP_METHOD_PUT = 'put';
-
-    const ROOT_URL = 'https://api.cloud.wowza.com/api/v1.4';
-    const ROOT_URL_TEST = 'https://api-sandbox.cloud.wowza.com/api/v1.4';
+    
+    const ROOT_URL = 'https://api.cloud.wowza.com/api/';
+    const ROOT_URL_TEST = 'https://api-sandbox.cloud.wowza.com/api/';
 
     const ERROR_RESPONSE_CLASS = ErrorResponse::class;
 
@@ -42,6 +42,12 @@ abstract class Request
      * @Exclude
      */
     protected $test = false;
+    
+    /**
+     * @var string
+     * @Exclude
+     */
+    protected $version = 'v1.4';
 
     /**
      * @var \GuzzleHttp\Client
@@ -217,7 +223,9 @@ abstract class Request
             $rootUrl = self::ROOT_URL_TEST;
         }
 
-        $url = $rootUrl . $this->getApiPath();
+        $version = $this->getVersion();
+
+        $url = $rootUrl . $version. $this->getApiPath();
 
         if ($this->getQueryParameters()) {
             $queryString = http_build_query($this->getQueryParameters());
@@ -225,6 +233,22 @@ abstract class Request
         }
 
         return $url;
+    }
+
+    public function getVersion(): string
+    {
+       
+        return $this->version;
+       
+    }
+
+    public function setVersion( String $version )
+    {
+       
+        $this->version = $version;
+
+        return $this;
+       
     }
 
     protected function getHeaders(): array
