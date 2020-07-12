@@ -311,6 +311,13 @@ class LiveStream
 
     /**
      * @var bool
+     * @SerializedName("vod_stream")
+     * @Type("boolean")
+     */
+    private $vodStream;
+
+    /**
+     * @var bool
      * @SerializedName("remove_hosted_page_logo_image")
      * @Type("boolean")
      */
@@ -789,6 +796,18 @@ class LiveStream
     public function setRecording(bool $recording): self
     {
         $this->recording = $recording;
+        
+        return $this;
+    }
+
+    public function isVodStream(bool $vodStream): ?bool
+    {
+       return $this->vodStream;
+    }
+
+    public function setVodStream(bool $vodStream): self
+    {
+        $this->vodStream = $vodStream;
         
         return $this;
     }
