@@ -169,7 +169,7 @@ abstract class Request
             if ($e instanceof ClientException) {
                 $response = $e->getResponse();
             } else {
-                throw new HttpRequestException($e->getMessage());
+                throw $e;
             }
         }
 
