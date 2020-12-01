@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Ticketpark/WowzaWscRestPhp.svg?branch=master)](https://travis-ci.org/Ticketpark/WowzaWscRestPhp)
 
-A php library to use the [Wowza Streaming Cloud REST API](https://sandbox.cloud.wowza.com/api/current/docs).
+A php library to use the [Wowza Streaming Cloud REST API](https://api.docs.cloud.wowza.com).
 
 ## Installation
 
