@@ -8,7 +8,7 @@ require_once __DIR__ . '/../credentials.php';
 
 
 // Fetch the state of a live stream
-// https://sandbox.cloud.wowza.com/api/current/docs#operation/showLiveStreamState
+// https://api.docs.cloud.wowza.com/v1.5/tag/live_streams#operation/showLiveStreamState
 
 $response = (new FetchRequest($apiKey, $accessKey, false))
     ->setId('xxx') // id of a live stream
