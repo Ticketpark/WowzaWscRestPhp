@@ -2,33 +2,19 @@
 
 namespace Ticketpark\Wsc\Request\LiveStreamState;
 
+use Ticketpark\Wsc\Request\IdRequestInterface;
+use Ticketpark\Wsc\Request\IdRequestTrait;
 use Ticketpark\Wsc\Request\Request;
 use Ticketpark\Wsc\Request\RequestCommonsTrait;
 use Ticketpark\Wsc\Response\LiveStreamState\FetchResponse;
 
-class FetchRequest extends Request
+class FetchRequest extends Request implements IdRequestInterface
 {
     const API_PATH = '/live_streams/{id}/state';
     const RESPONSE_CLASS = FetchResponse::class;
 
     use RequestCommonsTrait;
-
-    /**
-     * @var string
-     */
-    private $id;
-
-    public function getId(): ?string
-    {
-        return $this->id;
-    }
-
-    public function setId(string $id): self
-    {
-        $this->id = $id;
-
-        return $this;
-    }
+    use IdRequestTrait;
 
     public function getHttpMethod(): string
     {

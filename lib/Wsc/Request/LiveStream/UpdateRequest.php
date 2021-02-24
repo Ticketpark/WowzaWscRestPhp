@@ -5,16 +5,19 @@ namespace Ticketpark\Wsc\Request\LiveStream;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use Ticketpark\Wsc\Container\LiveStream;
+use Ticketpark\Wsc\Request\IdRequestInterface;
+use Ticketpark\Wsc\Request\IdRequestTrait;
 use Ticketpark\Wsc\Request\Request;
 use Ticketpark\Wsc\Request\RequestCommonsTrait;
 use Ticketpark\Wsc\Response\LiveStream\FetchResponse;
 
-class UpdateRequest extends Request
+class UpdateRequest extends Request implements IdRequestInterface
 {
     const API_PATH = '/live_streams/{id}';
     const RESPONSE_CLASS = FetchResponse::class;
 
     use RequestCommonsTrait;
+    use IdRequestTrait;
 
     /**
      * @var LiveStream
@@ -33,15 +36,6 @@ class UpdateRequest extends Request
         $this->liveStream = $liveStream;
 
         return $this;
-    }
-
-    private function getId(): ?string
-    {
-        if (null !== $this->liveStream) {
-            return $this->liveStream->getId();
-        }
-
-        return null;
     }
 
     public function getHttpMethod(): string
