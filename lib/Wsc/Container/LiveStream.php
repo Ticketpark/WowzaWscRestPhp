@@ -233,6 +233,13 @@ class LiveStream
     private $password;
 
     /**
+     * @var string
+     * @SerializedName("playback_stream_name")
+     * @Type("string")
+     */
+    private $playbackStreamName;
+
+    /**
      * @var bool
      * @SerializedName("player_countdown")
      * @Type("boolean")

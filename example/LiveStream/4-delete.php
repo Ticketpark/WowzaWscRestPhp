@@ -8,7 +8,7 @@ require_once __DIR__ . '/../credentials.php';
 
 
 // Delete a live stream
-// https://api.docs.cloud.wowza.com/v1.5/tag/live_streams#operation/deleteLiveStream
+// https://api.docs.cloud.wowza.com/current/tag/live_streams#operation/deleteLiveStream
 
 $response = (new DeleteRequest($apiKey, $accessKey, false))
     ->setId('xxx') // id of a live stream

@@ -20,8 +20,8 @@ abstract class Request
     const HTTP_METHOD_DELETE = 'delete';
     const HTTP_METHOD_PUT = 'put';
 
-    const ROOT_URL = 'https://api.cloud.wowza.com/api/v1.5';
-    const ROOT_URL_TEST = 'https://api-sandbox.cloud.wowza.com/api/v1.5';
+    const ROOT_URL = 'https://api.cloud.wowza.com/api/v1.6';
+    const ROOT_URL_TEST = 'https://api-sandbox.cloud.wowza.com/api/v1.6';
 
     const ERROR_RESPONSE_CLASS = ErrorResponse::class;
 
