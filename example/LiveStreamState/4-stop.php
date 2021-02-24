@@ -8,7 +8,7 @@ require_once __DIR__ . '/../credentials.php';
 
 
 // Stop a live stream
-// https://sandbox.cloud.wowza.com/api/current/docs#operation/stopLiveStream
+// https://api.docs.cloud.wowza.com/v1.5/tag/live_streams#operation/stopLiveStream
 
 $response = (new StopRequest($apiKey, $accessKey, false))
     ->setId('xxx') // id of a live stream

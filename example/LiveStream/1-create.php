@@ -9,7 +9,7 @@ require_once __DIR__ . '/../credentials.php';
 
 
 // Create a live stream
-// https://sandbox.cloud.wowza.com/api/current/docs#operation/createLiveStream
+// https://api.docs.cloud.wowza.com/v1.5/tag/live_streams#operation/createLiveStream
 
 $liveStream = (new LiveStream())
     ->setName('My test stream')

@@ -8,7 +8,7 @@ require_once __DIR__ . '/../credentials.php';
 
 
 // Fetch all live streams
-// https://sandbox.cloud.wowza.com/api/current/docs#operation/listLiveStreams
+// https://api.docs.cloud.wowza.com/v1.5/tag/live_streams#operation/listLiveStreams
 
 $response = (new FetchAllRequest($apiKey, $accessKey, false))
     ->execute();
@@ -17,7 +17,7 @@ $liveStreams = $response->getLiveStreams();
 
 
 // Fetch details of first result
-// https://sandbox.cloud.wowza.com/api/current/docs#operation/showLiveStream
+// https://api.docs.cloud.wowza.com/v1.5/tag/live_streams#operation/showLiveStream
 
 $response = (new FetchRequest($apiKey, $accessKey, false))
     ->setId('lsxpkmhj')
