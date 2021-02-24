@@ -9,7 +9,7 @@ require_once __DIR__ . '/../credentials.php';
 
 
 // Update a live stream
-// https://api.docs.cloud.wowza.com/v1.5/tag/live_streams#operation/updateLiveStream
+// https://api.docs.cloud.wowza.com/current/tag/live_streams#operation/updateLiveStream
 
 $liveStream = (new LiveStream())
     ->setId('xxx') // id of a live stream

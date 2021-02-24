@@ -8,7 +8,7 @@ require_once __DIR__ . '/../credentials.php';
 
 
 // Fetch details of a single livestream
-// https://api.docs.cloud.wowza.com/v1.5/tag/live_streams#operation/showLiveStream
+// https://api.docs.cloud.wowza.com/current/tag/live_streams#operation/showLiveStream
 
 $response = (new FetchRequest($apiKey, $accessKey, false))
     ->setId('xxx')
