@@ -8,6 +8,7 @@ use GuzzleHttp\Psr7\Response;
 use JMS\Serializer\SerializerBuilder;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use Ticketpark\Wsc\Request\IdRequestInterface;
 use Ticketpark\Wsc\Request\Request;
 use Ticketpark\Wsc\Response\ErrorResponse;
 use Ticketpark\Wsc\Response\ResponseInterface;
@@ -42,6 +43,10 @@ abstract class CommonRequestTest extends TestCase
     {
         $initializer = new $requestClass('key', 'secret');
         $initializer->setClient($this->getClientMock($initializer->getHttpMethod()));
+
+        if ($initializer instanceof IdRequestInterface) {
+            $initializer->setId('dummy-id');
+        }
 
         return $initializer->execute();
     }

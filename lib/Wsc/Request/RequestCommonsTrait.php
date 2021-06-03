@@ -8,7 +8,7 @@ trait RequestCommonsTrait
     {
         $apiPath = self::API_PATH;
 
-        if (strstr($apiPath, '{id}') && method_exists($this, 'getId')) {
+        if ($this instanceof IdRequestInterface) {
             $apiPath = str_replace('{id}', $this->getId(), $apiPath);
         }
 
