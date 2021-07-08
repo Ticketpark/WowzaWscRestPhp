@@ -48,7 +48,30 @@ class SourceConnectionInformation
      * @Type("string")
      */
     private $password;
+    /**
+     * @var string
+     * @SerializedName("sdp_url")
+     * @Type("string")
+     */
+    private $sdp_url;
 
+    /**
+     * @var string
+     * @SerializedName("application_name")
+     * @Type("string")
+     */
+    private $application_name;
+
+    public function getSdpUrl(): string
+    {
+        return $this->sdp_url;
+    }
+
+    public function getApplicationName(): string
+    {
+        return $this->application_name;
+    }
+    
     public function getPrimaryServer(): ?string
     {
         return $this->primaryServer;
