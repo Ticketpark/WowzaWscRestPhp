@@ -32,6 +32,7 @@ class LiveStream
     CONST ENCODER_MEDIA_DS = 'media_ds';
     CONST ENCODER_AXIS = 'axis';
     CONST ENCODER_EPIPHAN = 'epiphan';
+    CONST ENCODER_FILE = 'file';
     CONST ENCODER_HAUPPAUGE = 'hauppauge';
     CONST ENCODER_JVC = 'jvc';
     CONST ENCODER_LIVE_U = 'live_u';
@@ -47,6 +48,8 @@ class LiveStream
     CONST ENCODER_OTHER_RTMP = 'other_rtmp';
     CONST ENCODER_OTHER_RTSP = 'other_rtsp';
     CONST ENCODER_OTHER_WEBRTC = 'other_webrtc';
+    CONST ENCODER_OTHER_UDP = 'other_udp';
+    CONST ENCODER_OTHER_SRT = 'other_srt';
 
     CONST TRANSCODER_TYPE_TRANSCODED = 'transcoded';
     CONST TRANSCODER_TYPE_PASSTHROUGH = 'passthrough';
@@ -68,8 +71,7 @@ class LiveStream
     CONST PLAYER_LOGO_POSITION_BOTTOM_LEFT = 'bottom-left';
     CONST PLAYER_LOGO_POSITION_BOTTOM_RIGHT = 'bottom-right';
 
-    CONST PLAYER_TYPE_HTML5 = 'original_html5';
-    CONST PLAYER_TYPE_WOWZA = 'wowza_player';
+    CONST PLAYER_TYPE_WOWZA = 'wowza_video_player';
 
     /**
      * @var string
