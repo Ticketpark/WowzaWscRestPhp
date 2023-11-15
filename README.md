@@ -1,6 +1,10 @@
 # WscPHP – A Wowza Streaming Cloud REST API PHP library
 
-[![Build Status](https://github.com/Ticketpark/WowzaWscRestPhp/actions/workflows/tests.yml/badge.svg)](https://github.com/Ticketpark/WowzaWscRestPhp/actions)
+---
+
+**THIS LIBRARY IS NO LONGER MAINTAINED. FEEL FREE TO CONTINUE DEVELOPMENT IN YOUR OWN FORK.**
+
+---
 
 A php library to use the [Wowza Streaming Cloud REST API](https://api.docs.cloud.wowza.com).
 
